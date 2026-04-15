@@ -1,8 +1,7 @@
 #ifndef HELLO_WINDOW_CUBE_H
 #define HELLO_WINDOW_CUBE_H
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+#include "config.h"
 
 #include "Mesh.h"
 #include "Object.h"

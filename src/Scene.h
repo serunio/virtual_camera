@@ -1,7 +1,3 @@
-//
-// Created by kub on 15.04.2026.
-//
-
 #ifndef HELLO_WINDOW_SCENE_H
 #define HELLO_WINDOW_SCENE_H
 #include <memory>

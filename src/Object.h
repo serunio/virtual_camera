@@ -2,7 +2,6 @@
 #define HELLO_WINDOW_OBJECT_H
 
 #include "config.h"
-#include <glm/glm.hpp>
 
 #include "Mesh.h"
 
