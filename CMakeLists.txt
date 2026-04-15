@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(hello_window VERSION 1.0.0)
+project(virtual_camera VERSION 1.0.0)
 
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 
-add_executable(hello_window 
+add_executable(virtual_camera
 src/config.h
         src/Shader.h
 dependencies/stb_image.h
@@ -19,9 +19,9 @@ dependencies/glad/glad.c
         src/Scene.h
         src/Tetrahedron.h)
 
-target_link_libraries(hello_window
+target_link_libraries(virtual_camera
     glfw
     OpenGL::GL
 )
 
-target_include_directories(hello_window PRIVATE dependencies)
+target_include_directories(virtual_camera PRIVATE dependencies)
