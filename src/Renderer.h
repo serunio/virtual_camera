@@ -10,7 +10,7 @@ private:
     Shader shader;
 public:
 
-    Renderer() : shader("shaders/vertex.glsl", "shaders/fragment.glsl")
+    Renderer() : shader("../shaders/vertex.glsl", "../shaders/fragment.glsl")
     {
 
     }
