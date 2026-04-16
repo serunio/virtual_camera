@@ -23,7 +23,7 @@ public:
             fov += 1.5f;
         if(glfwGetKey(window, GLFW_KEY_Z))
             fov -= 1.5f;
-        fov = std::clamp(fov, 1.0f, 179.0f);
+        fov = glm::clamp(fov, 1.0f, 179.0f);
         if(glfwGetKey(window, GLFW_KEY_W))
             cameraPos += cameraSpeed * normalize(vec3(cameraFront.x, 0, cameraFront.z));
         if(glfwGetKey(window, GLFW_KEY_S))
@@ -46,7 +46,7 @@ public:
         if (glfwGetKey(window, GLFW_KEY_DOWN))
             pitch -= rotateAngle;
 
-        pitch = std::clamp(pitch, -89.0f, 89.0f);
+        pitch = glm::clamp(pitch, -89.0f, 89.0f);
         mat3 yawRot = mat3(rotate(mat4(1.0f), radians(yaw), up));
         cameraFront = normalize(yawRot * vec3(0.0f, 0.0f, -1.0f));
 
