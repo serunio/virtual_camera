@@ -26,4 +26,4 @@ target_link_libraries(virtual_camera
         OpenGL::GL
 )
 
-target_include_directories(virtual_camera PRIVATE dependencies)
+target_include_directories(virtual_camera PRIVATE dependencies dependencies/glm)
