@@ -28,13 +28,13 @@ void main()
 
         vec3 cameraRight = vec3(view[0][0], view[1][0], view[2][0]);
         vec3 cameraUp    = vec3(view[0][1], view[1][1], view[2][1]);
-
         vec3 cameraForward = vec3(view[0][2], view[1][2], view[2][2]);
 
         vec3 billboardPos =
-            worldPos +
-            cameraRight * aPos.x +
-            cameraUp * aPos.y;
+            worldPos 
+            + cameraRight * aPos.x 
+            + cameraUp * aPos.y
+            ;
 
         gl_Position =
             projection *

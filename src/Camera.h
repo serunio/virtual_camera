@@ -11,7 +11,7 @@ private:
     float fov = 55.0f;
     float yaw = 0.0f;
     float pitch = 0.0f;
-    vec3 cameraPos = vec3(0.5f, 0.0f, 5.0f);
+    vec3 cameraPos = vec3(0.0f, 0.0f, 5.0f);
     vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
     vec3 up = vec3(0.0f, 1.0f, 0.0f);
 public:

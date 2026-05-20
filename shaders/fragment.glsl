@@ -60,24 +60,14 @@ void main()
         float z =
             sqrt(radius * radius - r2);
 
-
-        vec3 surfacePos = 
-            CameraRight * LocalPos.x +
-            CameraUp * LocalPos.y +
-            CameraForward * z;
-
-        norm = normalize(surfacePos);
-
-        fragPos = SphereCenter + surfacePos;
-
-        
+        fragPos = FragPos + CameraForward * z;
+        norm = normalize(fragPos - SphereCenter);
     }
     else
     {
         norm = normalize(Normal);
         fragPos = FragPos;
     }
-    vec3 R = normalize(SphereCenter - fragPos);
     if(LightCount > 0)
     {
         for (int i = 0; i < LightCount; i++)
@@ -97,11 +87,11 @@ void main()
             float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
             vec3 specular = lights[i].specular * (spec * material.specular);  
 
-            if(diff == 0)
-            {
-                diffuse = vec3(0);
-                specular = vec3(0);
-            }
+            // if(diff == 0)
+            // {
+            //     diffuse = vec3(0);
+            //     specular = vec3(0);
+            // }
                 
             result += ambient + diffuse + specular;
         }
