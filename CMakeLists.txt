@@ -12,18 +12,22 @@ add_executable(virtual_camera
         dependencies/stb_image.h
         src/main.cpp
         dependencies/glad/glad.c
-        src/Cube.h
+        src/Shapes/Cube.h
         src/Camera.h
         src/Renderer.h
         src/App.h
         src/Mesh.h
-        src/Object.h
+        src/Shapes/Object.h
         src/Scene.h
-        src/Tetrahedron.h)
+        src/Shapes/Tetrahedron.h
+        src/Light.h
+        src/LightManager.h
+        src/Material.h
+        )
 
 target_link_libraries(virtual_camera
         glfw
         OpenGL::GL
 )
 
-target_include_directories(virtual_camera PRIVATE dependencies dependencies/glm)
+target_include_directories(virtual_camera PRIVATE dependencies dependencies/glm src src/Shapes)

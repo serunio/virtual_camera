@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/virtual_camera.dir/link.d CMakeFiles/virtual_camera.dir/src/main.cpp.o CMakeFiles/virtual_camera.dir/dependencies/glad/glad.c.o -o virtual_camera  dependencies/glfw/src/libglfw3.a /usr/lib64/libGL.so /usr/lib64/librt.a -lm -ldl

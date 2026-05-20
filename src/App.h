@@ -43,12 +43,13 @@ public:
         {
             std::cout << "Failed to initialize GLAD" << std::endl;
         }
-
+        glEnable(GL_DEPTH_TEST);
         camera = Camera();
         renderer = new Renderer();
+        
     }
 
-    void run(const Scene& scene)
+    void run(Scene& scene)
     {
         float dt = 0.0f;
         float lastFrame = 0.0f;
@@ -61,9 +62,7 @@ public:
 
             processInput();
             camera.processInput(window, dt);
-
-
-
+            scene.processInput(window, dt);
             renderer->render(camera, scene);
 
             glfwSwapBuffers(window);
@@ -73,7 +72,5 @@ public:
         glfwTerminate();
     }
 };
-
-
 
 #endif //HELLO_WINDOW_APP_H

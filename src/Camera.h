@@ -64,7 +64,11 @@ public:
 
     mat4 getProjection() const
     {
-        return perspective(radians(fov), 16.0f / 9.0f, 0.0f, 100.0f);
+        return perspective(radians(fov), 16.0f / 9.0f, 0.01f, 100.0f);
+    }
+
+    vec3 getPosition() const {
+        return cameraPos;
     }
 };
 

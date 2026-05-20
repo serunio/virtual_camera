@@ -57,6 +57,21 @@ public:
         glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, value_ptr(value));
     }
 
+    void setVec3(const string &name, vec3 value)
+    {
+        glUniform3f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z);
+    }
+
+    void setVec3V(const string &name, vector<vec3>& value) const
+    {
+        glUniform3fv(glGetUniformLocation(ID, name.c_str()), value.size(), value_ptr(value[0]));
+    }
+
+    void setBool(const string &name, bool value) const
+    {
+        glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
+    }
+
 
 private:
     unsigned int getShader(const char* shaderPath, GLenum type) 
